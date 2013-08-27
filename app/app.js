@@ -1,11 +1,10 @@
 var express = require('express');
 var app = express();
 
-app.get('/hello.txt', function(req, res){
-  var body = 'Hello World';
-  res.setHeader('Content-Type', 'text/plain');
-  res.setHeader('Content-Length', body.length);
-  res.end(body);
+app.use(express.logger());
+app.use('/static', express.static(__dirname + '/static'));
+app.get('/*', function(req, res){
+  res.send('Express Hello World');
 });
 
 app.listen(8000);

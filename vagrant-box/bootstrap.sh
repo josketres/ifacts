@@ -34,3 +34,6 @@ sudo sh -c "cat > /etc/profile.d/phantomjs-init.sh" <<'EOF'
 export PHANTOMJSHOME=/opt/phantomjs-1.9.1-linux-i686
 export PATH=$PATH:$PHANTOMJSHOME/bin
 EOF
+
+# install jitsu
+sudo npm install jitsu -g
