@@ -1,0 +1,10 @@
+{
+  "name" : "ifacts",
+  "dependencies": {
+    "angular": "1.0.8",
+    "angular-mocks": "1.0.8",
+    "angular-resource": "1.0.8",
+    "angular-scenario": "1.0.8",
+    "bootstrap.css": "2.3.2"
+  }
+}

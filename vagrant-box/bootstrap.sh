@@ -20,6 +20,7 @@ sudo sh -c "cat > /etc/profile.d/node-init.sh" <<'EOF'
 export NODEHOME=/opt/node-v0.10.15-linux-x86
 export PATH=$PATH:$NODEHOME/bin
 EOF
+source /etc/profile.d/node-init.sh
 
 # install phantom-js dependencies
 sudo apt-get -qy install fontconfig 
@@ -34,6 +35,11 @@ sudo sh -c "cat > /etc/profile.d/phantomjs-init.sh" <<'EOF'
 export PHANTOMJSHOME=/opt/phantomjs-1.9.1-linux-i686
 export PATH=$PATH:$PHANTOMJSHOME/bin
 EOF
+source /etc/profile.d/phantomjs-init.sh
 
 # install jitsu
-sudo npm install jitsu -g
+cd /opt/node-v0.10.15-linux-x86/bin
+sudo ./npm install jitsu -g
+sudo ./npm install bower -g
+sudo ./npm install recess -g
+sudo ./npm install karma -g

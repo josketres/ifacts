@@ -9,7 +9,10 @@
   "version": "0.0.1-3",
   "private": true,
   "dependencies": {
-    "express": "3.3.5"
+    "express": "3.3.5",
+    "ejs": "*",
+    "karma": "~0.10",
+    "karma-ng-scenario": "~0.1"
   },
   "scripts": {
     "start": "node app.js"
